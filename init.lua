@@ -1,13 +1,30 @@
----@diagnostic disable
-local xplr = xplr
----@diagnostic enable
+local function setup()
+  local xplr = xplr
 
-local util = require("plugin-template1.lib.util")
+  xplr.config.general.default_ui.prefix = " "
+  xplr.config.general.default_ui.suffix = ""
 
-local function setup(args)
-  print(util.dump(args))
-  print(util.dump(xplr))
-  io.read()
+  xplr.config.general.focus_ui.prefix = "│"
+  xplr.config.general.focus_ui.suffix = ""
+
+  xplr.config.general.selection_ui.prefix = "▍"
+  xplr.config.general.selection_ui.suffix = ""
+  xplr.config.general.selection_ui.style = {}
+  xplr.config.general.focus_selection_ui.style = {}
+
+  xplr.config.general.focus_selection_ui.prefix = "▌"
+  xplr.config.general.focus_selection_ui.suffix = ""
+
+  xplr.config.general.table.header.cols = {
+    {},
+  }
+
+  xplr.config.general.table.tree = {
+    {},
+    {},
+    {},
+  }
+
 end
 
 return { setup = setup }

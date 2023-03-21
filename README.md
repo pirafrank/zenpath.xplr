@@ -1,13 +1,8 @@
-# xplr plugin template
+# zenpath
 
-Use this template to [write your own xplr plugin](https://arijitbasu.in/xplr/en/writing-plugins.html).
+A xplr theme inspired by [zentable](https://github.com/sayanarijit/zentable.xplr).
 
-> **NOTE:** The `src` directory is a symlink to `.` for compatibility reasons.
-> It may be removed in the future.
-
-## Requirements
-
-- Some tool
+![screen.png](https://github.com/pirafrank/zenpath.xplr/raw/main/assets/screen.png)
 
 ## Installation
 
@@ -29,24 +24,11 @@ Use this template to [write your own xplr plugin](https://arijitbasu.in/xplr/en/
   ```bash
   mkdir -p ~/.config/xplr/plugins
 
-  git clone https://github.com/{username}/{plugin}.xplr ~/.config/xplr/plugins/{plugin}
+  git clone https://github.com/pirafrank/zenpath.xplr ~/.config/xplr/plugins/zenpath
   ```
 
 - Require the module in `~/.config/xplr/init.lua`
 
   ```lua
-  require("{plugin}").setup()
-
-  -- Or
-
-  require("{plugin}").setup{
-    mode = "action",
-    key = ":",
-  }
-
-  -- Type `::` and enjoy.
+  require("zenpath").setup()
   ```
-
-## Features
-
-- Some cool feature
